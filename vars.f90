@@ -3,10 +3,10 @@ integer,parameter:: Q=8
 real, parameter:: r0=1.0;
 integer ied,jed
 real dx,dt,tt,t_end
-real ei(0:8,2)
+real ei(0:Q,2)
 real, pointer:: f(:,:,:), feq(:,:,:), u(:,:), v(:,:), rho(:,:)
 real, pointer:: x(:,:), y(:,:)
-real wi(0:8),g(0:8)
+real wi(0:Q),g(0:Q)
 real omg
 contains
 

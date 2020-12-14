@@ -13,7 +13,7 @@ subroutine init()
 	call gengrid()
 	u(:,:)=0.0
 	v(:,:)=0.0
-	rho(:,:)=1.0
+	rho(:,:)=r0
 	u(1,2:jed-1)=0.1
 	ei(:,:)=0.0
 	ei(1,1)=1.0
@@ -31,7 +31,9 @@ subroutine init()
 	wi(0)=4.0/9
 	wi(1:4)=1.0/9
 	wi(5:8)=1.0/36
-
+!	do j=1,jed
+!		u(1,j)=-1*(y(1,j)-0.5)**2+0.25
+!	enddo
 	do i=1,ied
 	do j=1,jed
 		uv=u(i,j)**2+v(i,j)**2

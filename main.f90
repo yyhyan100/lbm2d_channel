@@ -1,6 +1,6 @@
 program main
 use vars
-
+integer kstep
 call init()
 tt=0.0
 kstep=1
@@ -14,6 +14,7 @@ do while (tt<=t_end)
 	kstep=kstep+1
 	tt=tt+dt
 enddo
+call output(kstep-1)
 call deallocateField()
 print *, "done!"
 end program
