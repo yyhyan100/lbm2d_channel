@@ -42,14 +42,14 @@ subroutine bouncebk
 ! right
 	i=ied
 	do j=1,jed
-		do k=0,Q
-			f(k,i,j)=2*f(k,i-1,j)-f(k,i-2,j)
-		enddo
-!		f(1,i,j)=2*f(1,i-1,j)-f(1,i-2,j)
-!		f(5,i,j)=2*f(5,i-1,j)-f(5,i-2,j)
-!		f(8,i,j)=2*f(8,i-1,j)-f(8,i-2,j)
-		v(i,j)=0.0
-		u(i,j)=2*u(i-1,j)-u(i-2,j)
+!		do k=0,Q
+!			f(k,i,j)=2*f(k,i-1,j)-f(k,i-2,j)
+!		enddo
+		f(3,i,j)=2*f(3,i-1,j)-f(3,i-2,j)
+		f(6,i,j)=2*f(6,i-1,j)-f(6,i-2,j)
+		f(7,i,j)=2*f(7,i-1,j)-f(7,i-2,j)
+!		v(i,j)=0.0
+!		u(i,j)=2*u(i-1,j)-u(i-2,j)
 	enddo
 	
 ! corner points, bounce back -- test
